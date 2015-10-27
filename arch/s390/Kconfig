@@ -113,6 +113,7 @@ config S390
 	select GENERIC_FIND_FIRST_BIT
 	select GENERIC_SMP_IDLE_THREAD
 	select GENERIC_TIME_VSYSCALL
+	select HAS_DMA
 	select HAVE_ALIGNED_STRUCT_PAGE if SLUB
 	select HAVE_ARCH_AUDITSYSCALL
 	select HAVE_ARCH_EARLY_PFN_TO_NID
@@ -124,6 +125,7 @@ config S390
 	select HAVE_CMPXCHG_DOUBLE
 	select HAVE_CMPXCHG_LOCAL
 	select HAVE_DEBUG_KMEMLEAK
+	select HAVE_DMA_ATTRS
 	select HAVE_DYNAMIC_FTRACE
 	select HAVE_DYNAMIC_FTRACE_WITH_REGS
 	select HAVE_FTRACE_MCOUNT_RECORD
@@ -580,7 +582,6 @@ config QDIO
 
 menuconfig PCI
 	bool "PCI support"
-	select HAVE_DMA_ATTRS
 	select PCI_MSI
 	help
 	  Enable PCI support.
